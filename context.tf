@@ -95,8 +95,7 @@ variable "context" {
 }
 
 variable "enabled" {
-  type        = bool
-  default     = null
+  default     = true
   description = "Set to false to prevent the module from creating any resources"
 }
 
@@ -209,8 +208,7 @@ variable "regex_replace_chars" {
 }
 
 variable "id_length_limit" {
-  type        = number
-  default     = null
+  default     = 255
   description = <<-EOT
     Limit `id` to this many characters (minimum 6).
     Set to `0` for unlimited length.
